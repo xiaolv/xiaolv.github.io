@@ -270,6 +270,15 @@
       <time datetime="2016-10-29T07:48:52.000Z" itemprop="datePublished">2016-10-29</time>
 </a>
 
+ 
+    <a href="/2016/10/29/test-post/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/10/29/test-post/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -325,6 +334,15 @@
       <time datetime="2016-10-28T23:00:11.000Z" itemprop="datePublished">2016-10-29</time>
 </a>
 
+ 
+    <a href="/2016/10/29/hello-world/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/10/29/hello-world/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -436,6 +454,31 @@
         })
     </script>
 
+
+    
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var duoshuoQuery = {short_name:"xiaolvblog"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
+                        $(this).siblings(".count-comment").text(num);
+                        $(this).remove();
+                    })
+                })
+            }
+        </script>
+    
+
+     
 
 
 
