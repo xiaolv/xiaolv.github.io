@@ -1,4 +1,6 @@
 ---
 title: 404
-date: 2016-10-29 10:51:06
+toc: false
+comments: false
+permalink: /404
 ---
