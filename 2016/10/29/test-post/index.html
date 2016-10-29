@@ -19,7 +19,7 @@
 <meta property="og:title" content="test post">
 <meta property="og:url" content="http://xiaolv.github.io/2016/10/29/test-post/index.html">
 <meta property="og:site_name" content="xiaolv's blog">
-<meta property="og:updated_time" content="2016-10-29T07:48:52.000Z">
+<meta property="og:updated_time" content="2016-10-29T09:05:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test post">
 
@@ -69,7 +69,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -101,6 +101,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -203,7 +210,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">一只写代码的驴</div>
                 </section>
                 
             </div>
@@ -304,7 +311,7 @@
         <p><span>本文标题:</span><a href="/2016/10/29/test-post/">test post</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaolv</a></p>
         <p><span>发布时间:</span>2016-10-29, 15:48:52</p>
-        <p><span>最后更新:</span>2016-10-29, 15:48:52</p>
+        <p><span>最后更新:</span>2016-10-29, 17:05:09</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/10/29/test-post/" title="test post">http://xiaolv.github.io/2016/10/29/test-post/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xiaolv.github.io/2016/10/29/test-post/　　作者: xiaolv" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -319,12 +326,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
+            <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2016/10/29/hello-world/">
                     Hello World
                 </a>
             </div>
+        
         
     </nav>
 
@@ -391,7 +398,7 @@
         var duoshuoQuery = {short_name:"xiaolvblog"};
         var loadComment = function(){
             var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//xiaolv.github.io/js/embed.js';
             s.async = true; s.charset = 'UTF-8';
             (d.head || d.body).appendChild(s);
         }
@@ -409,19 +416,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/10/29/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/29/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/test-post/">test post</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/test-post/">test post</a></li></ul>
 
 
 
@@ -464,6 +471,8 @@
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
@@ -495,7 +504,7 @@
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
             
             
